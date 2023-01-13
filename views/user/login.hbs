@@ -3,8 +3,11 @@
     <div class="container mt-5 pl-5">
       <h2 class="text-center">Login</h2>
       <form action="/login" method="post">
-        
-          <p class="error"></P>
+      {{#if loginErr}}
+         <p class="error">{{loginErr}}</P>
+
+        {{/if}}
+          
 
     
         <div class="form-group">
