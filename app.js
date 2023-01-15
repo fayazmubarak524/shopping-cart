@@ -35,6 +35,7 @@ app.use(fileUpload());
 app.use(
   session({
     secret: "Key",
+    
     cookie: { maxAge: 600000 },
   })
 );
