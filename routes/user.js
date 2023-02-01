@@ -28,7 +28,7 @@ router.get("/login", (req, res) => {
   console.log(req.session.user);
 
   if (req.session.user) {
-   
+
     res.redirect("/");
   } else {
     res.render("user/login", { "loginErr": req.session.userLoginErr });
@@ -41,7 +41,7 @@ router.get("/signup", (req, res) => {
 router.post("/signup", (req, res) => {
   userHelpers.doSignup(req.body).then((response) => {
     console.log(response);
-    
+
 
     req.session.user = response;
     req.session.user.loggedIn = true;
@@ -53,7 +53,7 @@ router.post("/login", (req, res) => {
   userHelpers.doLogin(req.body).then((response) => {
     if (response.status) {
 
-     
+
       req.session.user = response.user;
       req.session.user.loggedIn = true;
       res.redirect("/");
@@ -64,7 +64,7 @@ router.post("/login", (req, res) => {
   });
 });
 router.get("/logout", (req, res) => {
-  req.session.user=null
+  req.session.user = null
   res.redirect("/");
 });
 router.get("/cart", verifyLogin, async (req, res) => {
