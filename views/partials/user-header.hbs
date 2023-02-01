@@ -11,23 +11,35 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="/">Shopping Cart</a>
+    <a class="navbar-brand" href="/">
+      Shopping Cart
+    </a>
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item active">
-          <a class="nav-link" href="/">Products
-            <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/">
+            Products
+            <span class="sr-only">
+              (current)
+            </span>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/cart">Cart <span class="badge badge-success" id="cart-count">{{cartCount}}</span></a>
+          <a class="nav-link" href="/cart">
+            Cart
+            <span class="badge badge-success" id="cart-count">
+              {{cartCount}}
+            </span>
+          </a>
         </li>
         {{#if user}}
           <li class="nav-item">
-            <a class="nav-link" href="#">Orders</a>
+            <a class="nav-link" href="/orders">
+              Orders
+            </a>
           </li>
         {{/if}}
-
       </ul>
       <div class="dropdown">
         <button
@@ -39,26 +51,23 @@
           aria-expanded="false"
         >
           {{#if user}}
-
             {{user.Name}}
           {{else}}
             Account
-
           {{/if}}
-
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           {{#if user}}
-
-            <a class="dropdown-item" href="/logout">Logout</a>
+            <a class="dropdown-item" href="/logout">
+              Logout
+            </a>
           {{else}}
-            <a class="dropdown-item" href="/login">Login</a>
-
+            <a class="dropdown-item" href="/login">
+              Login
+            </a>
           {{/if}}
-
         </div>
       </div>
-
     </div>
   </nav>
 </header>
